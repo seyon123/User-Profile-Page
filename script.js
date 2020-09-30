@@ -6,7 +6,7 @@ setInterval(changeNumbers, 2000);
 
 // create a random grid of 0,1, or space for background
 function createBgNumbers() {
-	const size = 30;
+	const size = 50;
 	const row = Math.ceil(window.innerWidth / size);
 	const col = Math.ceil(window.innerHeight / size);
 	
@@ -17,7 +17,7 @@ function createBgNumbers() {
 			num.style.left = `${i * size}px`;
 			num.style.top = `${j * size}px`;
 			num.innerHTML =`<span>${getRandomNum()}</span>`;
-			num.style.color = Math.random() < 0.2 ? '#fff' : '#2f3542';
+			num.style.color = Math.random() < 0.4 ? '#fff' : '#2f3542';
 			document.body.appendChild(num);
 		}
 	}
@@ -28,6 +28,6 @@ function changeNumbers() {
 	
 	nums.forEach(num => {
 		num.innerHTML =`<span>${getRandomNum()}</span>`;
-		num.style.color = Math.random() < 0.2 ? '#fff' : '#2f3542';
+		num.style.color = Math.random() < 0.4 ? '#fff' : '#8E61E2';
 	});
 }
